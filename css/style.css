@@ -1,0 +1,284 @@
+@charset "UTF-8";
+@import url(reset.css);
+
+
+/* container */
+.container {
+  width: 1500px;
+  margin: 0 auto;
+}
+
+/* row */
+.row {padding: 0 30px;}
+
+/* 전체 레이아웃 */
+#header {
+  position: fixed;
+  height: 70px;
+  left: 0; right: 0; top: 0;
+  z-index: 100;
+  max-width: 1;
+}
+#contents {
+  height: 1800px;
+  width: 100%;
+  background-color: #E8E8E8;
+  padding: 180px 0;
+  box-sizing: border-box;
+}
+
+#contents .row {
+  padding: 0 60px;
+}
+
+
+
+/* 모바일 메뉴 */
+#nav {display: none;}
+#nav .menu {
+  position: absolute;
+  top: 26px; right: 0px;
+  display: block;
+  z-index: 5;
+}
+#nav .menu.open span:nth-child(1) {
+  transform: rotate(-45deg) translate(0, 7px);
+}
+#nav .menu.open span:nth-child(2) {display: none;}
+#nav .menu.open span:nth-child(3) {
+  transform: rotate(45deg) translate(0, -7px);
+}
+#nav .menu span {
+  width: 27px;
+  height: 3px;
+  background-color: #1e1f1f;
+  margin-bottom: 7px;
+  display: block;
+  transition: transform 0.3s, opacity 0.3s;
+}
+#nav .navWrap {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; 
+  width: 100%; height: 100%;
+  background-color: #fff;
+  padding-top: 90px;
+  z-index: 4;
+  transition: 0.3s;
+}
+#nav .navWrap ul {
+  height: 100%;
+  overflow-y: auto;
+}
+#nav .navWrap ul li {
+  display: block;
+  position: relative;
+  margin: 0 0 30px 0; padding: 0;
+  text-align: center;
+  transition: 0.5s;
+}
+#nav .navWrap ul li a {
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transition: 0.5s;
+  
+}
+#nav .navWrap ul li a::before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  left: 0; top: 50px;
+  width: 100%; height: 2px;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+#nav .navWrap ul li a:hover:before {
+  opacity: 1;
+}
+.menu.open + .navWrap {
+  opacity: 1;
+}
+
+/* ------------------------- header */
+.header {
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.h_left {width: 20%;}
+.h_left img {
+  position: relative;
+  z-index: 6;
+  width: 90%;
+}
+
+/* h_center */
+.h_center {width: 40%;}
+.h_center>ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.h_center>ul>li {position: relative; padding: 0 5px 20px;}
+.h_center ul li a {font-size: 13px;}
+.h_center ul li ul {
+  opacity: 0;
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255,255,255,0.7);
+  border: 1px solid #565656;
+  padding: 30px 0;
+  transition: 0.5s;
+  width: 150px;
+  pointer-events: none; /* 마우스 이벤트 방해를 안 받음 */
+  
+}
+
+.h_center ul li ul::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -14px;
+  border: 7px solid #565656;
+  /* transparent : 투명 */
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid transparent; 
+}
+.h_center ul li.active ul {opacity: 1; pointer-events: visible;}
+.h_center ul li.active>ul li:hover a {font-size: 12px; pointer-events: visible;}
+
+.h_center ul li>ul>li {
+  margin: 0 0 16px 0;
+  height: auto;
+  display: block;
+  text-align: center;
+}
+.h_center ul li>ul>li a {font-size: 11px;}
+
+.h_right {width: 20%; position: relative;}
+.h_right ul {
+  width: 100%; 
+  display: flex;
+  justify-content: flex-end;
+}
+.h_right ul li {
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+/* ------------------------- banner */
+#banner {
+  width: 100%; 
+  height: 850px; 
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+#banner video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/* ------------------------- contents */
+.contents {
+  width: 100%; height: 1300px;
+  border: 1px solid #000;
+
+}
+
+
+
+
+
+
+
+/* 미디어쿼리 반응형 */
+@media (max-width:1290px) {
+  #banner {height: 700px;}
+}
+@media (max-width:1024px) {
+  .h_center>ul li a {font-size: 11px;}
+  #banner {height: 700px;}
+
+}
+@media (max-width:960px) {
+  .header {
+    position: relative;
+    display: block;
+  }
+  .header .h_left {
+    position: absolute;
+    left: 0; top: 10px;
+    width: 240px;
+  }
+  .h_center,.h_right {display: none;}
+  #nav {display: block;}
+  
+}
+@media (max-width:768px) {
+  #header {background-color: #fff; height: 60px;}
+  .header .h_left {width: 220px;}
+  #nav .menu {top: 22px;}
+  #nav .menu span {
+    width: 23px;
+    height: 3px;
+    background-color: #1e1f1f;
+    margin-bottom: 5px;
+    display: block;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  #nav .menu.open span:nth-child(1) {
+  transform: rotate(-45deg) translate(0, 5px);
+  }
+  #nav .menu.open span:nth-child(3) {
+  transform: rotate(45deg) translate(0, -5px);
+  }
+  #banner {height: 500px;}
+
+}
+@media (max-width:600px) {
+  #header {height: 50px;}
+  .row {padding: 0 11px;}
+  .header .h_left {top: 8px; width: 190px;}
+  #nav .menu {top: 15px;}
+  #nav .menu span {
+    width: 17px; height: 2px;
+    margin-bottom: 4px;
+  }
+  #nav .menu.open span:nth-child(1) {
+    transform: rotate(-45deg) translate(0, 4px);
+  }
+  #nav .menu.open span:nth-child(3) {
+    transform: rotate(45deg) translate(0, -4px);
+  }
+  #nav .navWrap {padding-top: 130px;}
+  #nav .navWrap ul li a {font-size: 30px;}
+  #banner {height: 350px;}
+}
+@media (max-width:480px) {
+  .header .h_left {width: 150px; top: 10px;}
+  #nav .navWrap ul li a {font-size: 25px;}
+  #nav .navWrap ul li a::before {
+    top: 33px;
+  }
+  #banner {height: 260px;}
+}
+@media (max-width:320px) {
+  .header .h_left {width: 130px;}
+  #nav .navWrap {padding-top: 100px;}
+  #nav .navWrap ul li {margin: 0 0 20px 0;}
+  #nav .navWrap ul li a {font-size: 20px;}
+
+}
