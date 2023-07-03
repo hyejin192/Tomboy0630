@@ -1,0 +1,78 @@
+/* 미디어쿼리 반응형 */
+@media (max-width:1290px) {
+    #banner {height: 700px;}
+  }
+  @media (max-width:1024px) {
+    .h_center>ul li a {font-size: 11px;}
+    #banner {height: 700px;}
+  
+  }
+  @media (max-width:960px) {
+    .header {
+      position: relative;
+      display: block;
+    }
+    .header .h_left {
+      position: absolute;
+      left: 0; top: 10px;
+      width: 240px;
+    }
+    .h_center,.h_right {display: none;}
+    #nav {display: block;}
+    
+  }
+  @media (max-width:768px) {
+    #header {background-color: #fff; height: 60px;}
+    .header .h_left {width: 220px;}
+    #nav .menu {top: 22px;}
+    #nav .menu span {
+      width: 23px;
+      height: 3px;
+      background-color: #1e1f1f;
+      margin-bottom: 5px;
+      display: block;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    #nav .menu.open span:nth-child(1) {
+    transform: rotate(-45deg) translate(0, 5px);
+    }
+    #nav .menu.open span:nth-child(3) {
+    transform: rotate(45deg) translate(0, -5px);
+    }
+    #banner {height: 500px;}
+  
+  }
+  @media (max-width:600px) {
+    #header {height: 50px;}
+    .row {padding: 0 11px;}
+    .header .h_left {top: 8px; width: 190px;}
+    #nav .menu {top: 15px;}
+    #nav .menu span {
+      width: 17px; height: 2px;
+      margin-bottom: 4px;
+    }
+    #nav .menu.open span:nth-child(1) {
+      transform: rotate(-45deg) translate(0, 4px);
+    }
+    #nav .menu.open span:nth-child(3) {
+      transform: rotate(45deg) translate(0, -4px);
+    }
+    #nav .navWrap {padding-top: 130px;}
+    #nav .navWrap ul li a {font-size: 30px;}
+    #banner {height: 350px;}
+  }
+  @media (max-width:480px) {
+    .header .h_left {width: 150px; top: 10px;}
+    #nav .navWrap ul li a {font-size: 25px;}
+    #nav .navWrap ul li a::before {
+      top: 33px;
+    }
+    #banner {height: 260px;}
+  }
+  @media (max-width:320px) {
+    .header .h_left {width: 130px;}
+    #nav .navWrap {padding-top: 100px;}
+    #nav .navWrap ul li {margin: 0 0 20px 0;}
+    #nav .navWrap ul li a {font-size: 20px;}
+  
+  }

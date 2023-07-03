@@ -8,7 +8,10 @@
   <title>STUDIO TOMBOY 리뉴얼</title>
   <!-- swiper css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.css" />
+  <!-- css -->
+  <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/media.css" />
   <!-- fontawsome cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
 </head>
@@ -136,30 +139,188 @@
       </div>
     </header><!-- header end -->
 
-
     <section id="banner">
       <video src="https://duil5h44iatq2.cloudfront.net/B857E32174/videos/11089/vod.mp4" muted autoplay loop></video>
     </section><!-- banner end -->
 
-
-    <section id="contents">
-      <div class="row">
-        <div class="contents">
-
-        </div><!-- contents -->
+    <div class="txtcontainer">
+      <div class="txtcontent">
+        <P>23 SUMMER CAMPAIGN RUN TO YOU 23 SUMMER CAMPAIGN RUN TO YOU 23</P>
       </div>
+    </div>
 
+    <section id="contents" class="animate" data-animate="motion">
+
+      <div class="container">
+        <div class="row">
+          <div class="contents">
+            <div class="tab_btn en_s">
+              <div class="click">2023</div>
+              <div>2022</div>
+              <div>2021</div>
+              <div>2020</div>
+            </div>
+            <!-- tab_btn end -->
+            <div class="page1 en_s">
+              <div class="box1">
+                <div class="cont1">
+                  <div class="cont1bg"></div>
+                  <em>EFFORTLEASSLY CHIC, CONTEMPORARY CASUAL</em>
+                  <p>
+                    STUDIO TOMBOY is a fashion brand for women founded in South
+                    Korea in 1977. Under the brand’s COOL and ROMANTIC
+                    personality, we continue to reflect the modern and confident
+                    lifestyle of today’s women.
+                  </p>
+                </div>
+                <div class="cont2">
+                  <div class="cont2desc">
+                    <h2>Popular</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati iusto similique voluptatibus iste eos natus, dolorum quisquam voluptates officiis quam. Ea qui corrupti voluptatem et voluptatibus modi obcaecati a, nisi quae eum soluta, nostrum eaque minima consectetur voluptates ratione enim excepturi, iusto deleniti. Ipsa maxime sequi aut autem quidem mollitia ab accusamus ipsam hic inventore incidunt ea nihil, molestias pariatur accusantium tempore, ullam harum, quia itaque rerum recusandae consequatur praesentium velit amet. Qui asperiores explicabo molestiae nesciunt ducimus, reiciendis, delectus minima labore vitae autem animi ipsam inventore magni odit optio a accusamus minus assumenda quia cumque. Cupiditate perspiciatis debitis mollitia.
+                    </p>
+                  </div>
+                  <div class="mhover_img">
+                    <img src="img/ins1-s.png" alt="pro1img" />
+                    <div class="zoom_img"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="box2">
+                <div class="box2desc">
+                  <h2>New Collection</h2>
+                  <p>
+                    <strong>STUDIO TOMBOY X by ‘SIKI IM’</strong>
+
+                    미국의 뉴욕을 주 무대로 활발히 활동하고 있는 젊은
+                    패션디자이너 SIKI IM. 그는 런던의 옥스퍼드 대학에서 건축학을
+                    전공 후 2009년 뉴욕에서 SIKI IM 브랜드를 런칭하며 세계적인
+                    입지를 쌓은 디자이너이다. 스튜디오 톰보이와의 협업
+                    컬렉션에서 선보이는 화섬 소재의 오버사이즈 실루엣과 실험적인
+                    패치워크 디테일, 독창적인 하이브리드 디자인을 만나보자.
+                  </p>
+                </div>
+                <div class="mainimg">
+                  <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
+
+                  <!-- slider nav -->
+                  <nav>
+                    <a href="#" class="main-nav prev" data-nav="previous"><i
+                        class="fas fa-angle-double-left"></i><span></span></a>
+                    <a href="#" class="main-nav next" data-nav="next"><i
+                        class="fas fa-angle-double-right"></i><span></span></a>
+                  </nav>
+                </div><!-- mainimg -->
+              </div>
+              <div class="box3">
+                <div class="card">
+                  <div class="front">
+                    <img src="img/ins20.jpg" alt="cardimg" />
+                  </div>
+                  <div class="back">
+                    <img src="img/bg1.jpg" alt="backimg" />
+                  </div>
+                </div>
+                <!-- card end -->
+                <div class="cont2">
+                  <span class="drag">Drag</span>
+                  <div class="line"></div>
+                  <div class="cubeslide">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide cube1"></div>
+                      <div class="swiper-slide cube2"></div>
+                      <div class="swiper-slide cube3"></div>
+                      <div class="swiper-slide cube4"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cont3">
+                  <div class="cont3desc">
+                    <h2>Book</h2>
+                    <p> You're Invited!<br>
+                      45th Anniversary POP-UP STORE<br>
+                      WE ALL TOMBOY</p>
+
+                    <button class="bookclick" onclick="openBook(); currentSlide(1)">Click!</button>
+                  </div>
+                  <div id="book">
+                    <a href="javascript:;">
+                      <img src="img/book1.jpg" alt="book1page" class="cursor" onclick="openBook(); currentSlide(1)">
+                    </a>
+                  </div><!-- book end -->
+
+                  <div id="myBook" class="mybook">
+                    <span class="close cursor" onclick="closeBook()"><i class="fas fa-times"></i>
+                    </span><!-- close end -->
+                    <div class="mybook-content">
+                      <div class="mySlides">
+                        <div class="numbertext">1/4</div>
+                        <img src="img/book2.jpg" alt="">
+                      </div>
+                      <div class="mySlides">
+                        <div class="numbertext">2/4</div>
+                        <img src="img/book3.jpg" alt="">
+                      </div>
+                      <div class="mySlides">
+                        <div class="numbertext">3/4</div>
+                        <img src="img/book4.jpg" alt="">
+                      </div>
+                      <div class="mySlides">
+                        <div class="numbertext">4/4</div>
+                        <img src="img/book5jpg.jpg" alt="">
+                      </div>
+
+                      <a href="#" class="prev" onclick="plusSlide(-1)"><i class="fas fa-caret-left"></i></a>
+                      <a href="#" class="next" onclick="plusSlide(1)"><i class="fas fa-caret-right"></i></a>
+
+
+                      <div class="row">
+                        <div class="column">
+                          <img src="img/book2.jpg" class="demo cursor" onclick="currentSlide(1)">
+                        </div>
+                        <div class="column">
+                          <img src="img/book3.jpg" class="demo cursor" onclick="currentSlide(2)">
+                        </div>
+                        <div class="column">
+                          <img src="img/book4.jpg" class="demo cursor" onclick="currentSlide(3)">
+                        </div>
+                        <div class="column">
+                          <img src="img/book5jpg.jpg" class="demo cursor" onclick="currentSlide(4)">
+                        </div>
+                      </div>
+                    </div><!-- modal-content end -->
+                  </div><!-- myBook end -->
+                </div>
+              </div>
+            </div>
+            <!-- 2023 - page1 end -->
+          </div>
+        </div>
+
+        <!-- contents -->
+      </div>
     </section><!-- contents end -->
-
   </div>
   <!-- Wrap end -->
 
   <!-- jquery cdn -->
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+  <!-- rgb codepen -->
+  <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/TweenMax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/imagesLoaded.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi-filters.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/rgbKineticSlider.js"></script>
+
   <!-- swiper cdn -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
 
+
+
+
   <script src="main.js"></script>
+  <script src="main2.js"></script>
 </body>
 
 </html>
